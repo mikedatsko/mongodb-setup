@@ -1,4 +1,4 @@
-version: '3'
+version: '3.7'
 services:
   db:
     image: mongo:latest
@@ -15,7 +15,7 @@ services:
       - APP_MONGO_DB=${APP_MONGO_DB}
     volumes:
       - type: bind
-        source: /data
+        source: ./data
         target: /data/db
       - type: bind
         source: ./scripts
